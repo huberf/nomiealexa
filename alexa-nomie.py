@@ -115,7 +115,7 @@ def call_nomie(intent, session):
     api_key = os.environ["NOMIE_KEY"]
 
     item = intent['slots']['response'].get('value')
-    if query:
+    if item:
 
         resp = urlopen(api_root + "push/" + api_key + '/action=track/label=' + item)
 
