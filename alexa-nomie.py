@@ -70,7 +70,7 @@ def on_intent(intent_request, session):
     intent_name = intent_request['intent']['name']
 
     # Dispatch to your skill's intent handlers
-    if intent_name == "wa_query":
+    if intent_name == "track":
         return call_nomie(intent, session)
     else:
         raise ValueError("Invalid intent")
