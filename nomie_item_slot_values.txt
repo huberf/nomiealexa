@@ -1,0 +1,9 @@
+Type:
+NOMIE_ITEM
+
+// Change these to actual names of your trackers
+Values:
+snack
+eat
+angry
+meditate
