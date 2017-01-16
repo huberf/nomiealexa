@@ -1,0 +1,13 @@
+{
+    "intents": [
+        {
+            "intent": "track",
+            "slots": [
+                {
+                    "name": "response",
+                    "type": "NOMIE_ITEM"
+                }
+            ]
+        }
+    ]
+}
