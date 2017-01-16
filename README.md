@@ -16,6 +16,8 @@ Track your life with Nomie Pro and the Amazon Alexa
    - You can use `test_event.json` as your test template
    - Consider extending the timeout beyond the default of 3 seconds (I raised mine to 10, which is likely excessive, but eliminated some sporadic errors e.g. [#1](https://github.com/n8henrie/alexa-wolfram-alpha/issues/1))
    - Put your Nomie API Key into an environment variable called "NOMIE_KEY" and also put your Alexa Skill Identifier in an environement variable called "SKILL_ID". For help view the [documentation](http://docs.aws.amazon.com/lambda/latest/dg/env_variables.html)
+   - (Optional) If any of your trackers have unpronounceable/incompatible names such as #1,
+     create an environment variable for them (e.g. "pee": "#1")
 1. Create a new [Alexa
    Skill](https://developer.amazon.com/edw/home.html#/skill/create) using
    `intent_schema.json` and `sample_utterances.txt`
