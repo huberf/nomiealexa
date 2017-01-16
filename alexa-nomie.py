@@ -115,8 +115,17 @@ def call_nomie(intent, session):
     api_key = os.environ["NOMIE_KEY"]
 
     item = intent['slots']['response'].get('value')
-    if item:
 
+    # Include unpronounceable/incompatible words in environment variable (e.g. #1)
+    # Only do this if you know what you are doing
+    try:
+        item = os.environ[item]
+    except:
+        # No exception found
+        doNothing = True
+    if item:
+        # Make multi-word phrase into URL compatible element
+        item = item.replace(" ", "%20").replace("#", "%23")
         resp = urlopen(api_root + "push/" + api_key + '/action=track/label=' + item)
 
         # TODO: Very request success
